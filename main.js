@@ -15,6 +15,7 @@ function Submit() {
 
  if (!email || !isValid) {
   form.classList.add('invalid')
+  form.classList.remove('submitting-form')
   return new Error('Invalid Email')
  }
 
