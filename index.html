@@ -13,36 +13,56 @@
 <body class="form-succeedesd">
  <main>
   <div class="img-box">
-   <img src="assets/images/illustration-sign-up-mobile.svg" alt="illustration" width="200" height="200">
+   <img id="img-mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="illustration" width="200" height="200">
+   <img id="img-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="illustration" width="200"
+    height="200">
   </div>
-  <div class="stay">
-   <h1>Stay updated!</h1>
-   <p>Join 60,000+ product managers receiving monthly updates on:</p>
-  </div>
-  <ul>
-   <li>
-    <img src="assets/images/icon-list.svg" alt="check icon" width="26" height="26">
-    <span>Product discovery and building what matters</span>
-   </li>
-   <li>
-    <img src="assets/images/icon-list.svg" alt="check icon" width="26" height="26">
-    <span>Measuring to ensure updates are a success</span>
-   </li>
-   <li>
-    <img src="assets/images/icon-list.svg" alt="check icon" width="26" height="26">
-    <span>And much more!</span>
-   </li>
-  </ul>
-  <form id="form-subscribe" novalidate>
-   <div class="field">
-    <div class="field-header">
-     <label for="email">Email address</label>
-     <strong>Valid email required</strong>
-    </div>
-    <input type="email" name="email" id="email" placeholder="email@company.com">
+  <div class="content">
+   <div class="stay">
+    <h1>Stay updated!</h1>
+    <p>Join 60,000+ product managers receiving monthly updates on:</p>
    </div>
-   <button type="submit">Subscribe to monthly newsletter</button>
-  </form>
+   <ul>
+    <li>
+     <img src="assets/images/icon-list.svg" alt="check icon" width="26" height="26">
+     <span>Product discovery and building what matters</span>
+    </li>
+    <li>
+     <img src="assets/images/icon-list.svg" alt="check icon" width="26" height="26">
+     <span>Measuring to ensure updates are a success</span>
+    </li>
+    <li>
+     <img src="assets/images/icon-list.svg" alt="check icon" width="26" height="26">
+     <span>And much more!</span>
+    </li>
+   </ul>
+   <form id="form-subscribe" novalidate>
+    <div class="field">
+     <div class="field-header">
+      <label for="email">Email address</label>
+      <strong>Valid email required</strong>
+     </div>
+     <input type="email" name="email" id="email" placeholder="email@company.com">
+    </div>
+    <button type="submit">
+     <span>Subscribe to monthly newsletter</span>
+     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+      <circle cx="4" cy="12" r="3" fill="currentColor">
+       <animate id="svgSpinners3DotsFade0" fill="freeze" attributeName="opacity"
+        begin="0;svgSpinners3DotsFade1.end-0.25s" dur="0.75s" values="1;.2" />
+      </circle>
+      <circle cx="12" cy="12" r="3" fill="currentColor" opacity=".4">
+       <animate fill="freeze" attributeName="opacity" begin="svgSpinners3DotsFade0.begin+0.15s" dur="0.75s"
+        values="1;.2" />
+      </circle>
+      <circle cx="20" cy="12" r="3" fill="currentColor" opacity=".3">
+       <animate id="svgSpinners3DotsFade1" fill="freeze" attributeName="opacity"
+        begin="svgSpinners3DotsFade0.begin+0.3s" dur="0.75s" values="1;.2" />
+      </circle>
+     </svg>
+    </button>
+   </form>
+  </div>
  </main>
 </body>
 

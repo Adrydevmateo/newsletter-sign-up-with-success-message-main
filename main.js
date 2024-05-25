@@ -7,13 +7,8 @@ const validateEmail = (email) => {
  return emailRegex.test(email);
 }
 
-form.addEventListener('input', () => {
- if (form.classList.contains('invalid')) form.classList.remove('invalid')
-})
-
-form.addEventListener('submit', (e) => {
- e.preventDefault()
-
+function Submit() {
+ form.classList.add('submitting-form')
  const formData = new FormData(form)
  const email = formData.get('email')
  const isValid = validateEmail(email)
@@ -44,6 +39,24 @@ form.addEventListener('submit', (e) => {
    const { success } = data
    if (success === 'false') return -1
    setUserEmail(email)
-   return location.href = '/thanks.html'
+   location.href = '/thanks.html'
+   return form.classList.remove('submitting-form')
   })
+}
+
+form.addEventListener('keydown', (e) => {
+ if (e.key === 'Enter') {
+  e.preventDefault()
+  Submit()
+ }
+})
+
+form.addEventListener('input', () => {
+ if (form.classList.contains('invalid')) form.classList.remove('invalid')
+})
+
+form.addEventListener('submit', (e) => {
+ e.preventDefault()
+
+ Submit()
 })

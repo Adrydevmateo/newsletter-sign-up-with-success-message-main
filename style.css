@@ -9,6 +9,7 @@
  --White: hsl(0, 0%, 100%);
 
  --border-radius: .4em;
+ --border-radius2: 1.2em;
 }
 
 *,
@@ -37,7 +38,7 @@ body {
 
 main {
  background-color: var(--White);
- border-radius: var(--border-radius);
+ border-radius: var(--border-radius2);
 }
 
 .img-box {
@@ -45,10 +46,14 @@ main {
  margin-bottom: 2.5em;
 }
 
-.img-box img {
+#img-mobile {
  width: 100%;
  height: 100%;
- border-radius: var(--border-radius);
+ border-radius: var(--border-radius2);
+}
+
+#img-desktop {
+ display: none;
 }
 
 p {
@@ -69,8 +74,6 @@ li {
  align-items: center;
  gap: 1em;
 }
-
-li img {}
 
 form {
  display: grid;
@@ -134,11 +137,30 @@ button[type='button'] {
  font-weight: bold;
  margin-bottom: 2em;
  transition: background-color .2s ease;
+ display: grid;
+ place-content: center;
 }
 
 button[type='submit']:hover,
 button[type='button']:hover {
  background-color: var(--Tomato);
+}
+
+.submitting-form button[type='submit'] span {
+ display: none;
+}
+
+button[type='submit'] svg {
+ height: 0;
+ width: 0;
+ opacity: 0;
+ transition: opacity 1s ease;
+}
+
+.submitting-form button[type='submit'] svg {
+ height: initial;
+ width: initial;
+ opacity: initial;
 }
 
 .stay,
@@ -154,7 +176,7 @@ form {
  padding: 2em 1em;
  display: grid;
  gap: 2em;
- border-radius: var(--border-radius);
+ border-radius: var(--border-radius2);
 }
 
 .success-msg-wrapper .row-1 {
@@ -180,4 +202,41 @@ form {
  margin: 0;
 }
 
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1440px) {
+ main {
+  display: flex;
+  flex-direction: row-reverse;
+ }
+
+ .content {
+  display: grid;
+  place-content: center;
+ }
+
+ .img-box {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  display: grid;
+  height: 100%;
+  padding: 0 1em;
+ }
+
+ #img-mobile {
+  display: none;
+ }
+
+ #img-desktop {
+  display: initial;
+  width: 100%;
+  height: 100%;
+ }
+
+ .success-msg-wrapper {
+  padding: 3em;
+ }
+
+ .success-msg-wrapper .row-2 button {
+  margin-top: -1em;
+ }
+}
