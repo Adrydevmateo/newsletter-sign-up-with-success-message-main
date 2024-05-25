@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Thanks!</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <div class="success-msg-wrapper">
+  <div class="row-1">
+   <img src="assets/images/icon-list.svg" alt="check icon" width="40" height="40">
+   <h1>Thanks for subscribing!</h1>
+   <p>
+    A confirmation email has been sent to <strong id="thanks-user-email">ash@loremcompany.com.</strong>
+    Please open it and click the button inside to confirm your subscription.
+   </p>
+  </div>
+  <div class="row-2">
+   <button type="button" id="dismiss-message-btn">Dismiss message</button>
+  </div>
+ </div>
+
+ <script>
+  window.onload = function () {
+   const dismissMsgBtn = document.getElementById('dismiss-message-btn')
+
+   dismissMsgBtn.addEventListener('click', () => {
+    return location.href = '/'
+   })
+  } 
+ </script>
+</body>
+
+</html>

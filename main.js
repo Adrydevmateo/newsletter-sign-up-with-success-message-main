@@ -39,4 +39,10 @@ form.addEventListener('submit', (e) => {
  const uri = 'https://formsubmit.co/ajax/adrydevmateo@gmail.com'
 
  fetch(uri, options)
+  .then(res => res.json())
+  .then(data => {
+   const { success } = data
+   if (success === 'false') return -1
+   return location.href = '/thanks.html'
+  })
 })

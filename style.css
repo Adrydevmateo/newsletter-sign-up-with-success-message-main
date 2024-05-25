@@ -122,7 +122,8 @@ form.invalid input[type='email'] {
  background-color: var(--Tomato-soft);
 }
 
-button[type='submit'] {
+button[type='submit'],
+button[type='button'] {
  cursor: pointer;
  color: var(--White);
  background-color: var(--Dark-Slate-Grey);
@@ -134,7 +135,8 @@ button[type='submit'] {
  transition: background-color .2s ease;
 }
 
-button[type='submit']:hover {
+button[type='submit']:hover,
+button[type='button']:hover {
  background-color: var(--Tomato);
 }
 
@@ -143,6 +145,30 @@ ul,
 form {
  padding-left: 2em;
  padding-right: 2em;
+}
+
+.success-msg-wrapper {
+ max-width: 20em;
+ background-color: var(--White);
+ padding: 2em 1em;
+ display: grid;
+ gap: 2em;
+}
+
+.success-msg-wrapper .row-1 {
+ display: flex;
+ flex-direction: column;
+ justify-content: end;
+}
+
+.success-msg-wrapper .row-2 {
+ display: flex;
+ flex-direction: column;
+ justify-content: end;
+}
+
+.success-msg-wrapper .row-2 button {
+ margin: 0;
 }
 
 @media screen and (min-width: 1440px) {}
