@@ -32,9 +32,12 @@
     <span>And much more!</span>
    </li>
   </ul>
-  <form id="form-subscribe">
+  <form id="form-subscribe" novalidate>
    <div class="field">
-    <label for="email">Email address</label>
+    <div class="field-header">
+     <label for="email">Email address</label>
+     <strong>Valid email required</strong>
+    </div>
     <input type="email" name="email" id="email" placeholder="email@company.com">
    </div>
    <button type="submit">Subscribe to monthly newsletter</button>
