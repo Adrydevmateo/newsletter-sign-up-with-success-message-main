@@ -6,6 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Thanks!</title>
  <link rel="stylesheet" href="style.css">
+ <script src="shared.js" defer></script>
 </head>
 
 <body>
@@ -30,7 +31,10 @@
    dismissMsgBtn.addEventListener('click', () => {
     return location.href = '/'
    })
-  } 
+
+   const userEmailSlot = document.getElementById('thanks-user-email')
+   userEmailSlot.innerText = getUserEmail()
+  }
  </script>
 </body>
 

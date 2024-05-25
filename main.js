@@ -43,6 +43,7 @@ form.addEventListener('submit', (e) => {
   .then(data => {
    const { success } = data
    if (success === 'false') return -1
+   setUserEmail(email)
    return location.href = '/thanks.html'
   })
 })
